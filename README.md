@@ -11,9 +11,13 @@
   
   ![image](https://github.com/user-attachments/assets/4891760e-78cc-485f-a7dc-5549123bcd82)
 
+
+
 - Membuat teks widget
   
   ![image](https://github.com/user-attachments/assets/e222ed44-54b1-448c-b82a-ab377a9ac44f)
+
+
 
 - Membuat image widget
 
