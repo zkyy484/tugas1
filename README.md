@@ -1,16 +1,8 @@
-# tugas_gwehh
+- Membuat file baru
+  ![image](https://github.com/user-attachments/assets/46f3cb1c-d18c-4d00-a342-ea8875efd9d6)
 
-A new Flutter project.
+- Membuat repo pada git
+  ![image](https://github.com/user-attachments/assets/7fe8bdff-9edb-4444-af07-4f44d6cb3d17)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Mengupload projektc pada git hub
+  
