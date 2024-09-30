@@ -27,3 +27,10 @@
 - Menambahkan loading cupertino dan fab
 
   <img width="385" alt="image" src="https://github.com/user-attachments/assets/0e6e7692-6db8-4fa1-9efd-edb2b610cf48">
+
+- Membuat dialog widget
+
+  <img width="374" alt="image" src="https://github.com/user-attachments/assets/bbd48afb-7a8e-404a-88e4-388324cb5af9">
+  <img width="374" alt="image" src="https://github.com/user-attachments/assets/31afd55b-f829-4d25-8408-c1f7102c5b58">
+
+
