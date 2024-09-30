@@ -24,6 +24,6 @@
   ![image](https://github.com/user-attachments/assets/fba8c0cc-456f-4da8-8cd1-9674c7060f8b)
 
 
-- Menambahkan loading dan fab
+- Menambahkan loading cupertino dan fab
 
   <img width="385" alt="image" src="https://github.com/user-attachments/assets/0e6e7692-6db8-4fa1-9efd-edb2b610cf48">
