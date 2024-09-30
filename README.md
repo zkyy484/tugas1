@@ -33,4 +33,16 @@
   <img width="374" alt="image" src="https://github.com/user-attachments/assets/bbd48afb-7a8e-404a-88e4-388324cb5af9">
   <img width="374" alt="image" src="https://github.com/user-attachments/assets/31afd55b-f829-4d25-8408-c1f7102c5b58">
 
+- Membuat input dan selection widget
+  
+  <img width="374" alt="image" src="https://github.com/user-attachments/assets/9ad4e3cc-1d14-40ea-ae06-31854aa71f27">
+
+- Membuat date dan time pickers
+
+  <img width="374" alt="image" src="https://github.com/user-attachments/assets/396295aa-4b82-4ab8-8be5-89f58fbd4ed3">
+  <img width="376" alt="image" src="https://github.com/user-attachments/assets/ac081fcb-e916-4aa7-b633-21f0d6af71e8">
+
+
+
+
 
