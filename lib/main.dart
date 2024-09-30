@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_gwehh/image_widget.dart';
-import 'package:tugas_gwehh/text_widget.dart';
+import 'dart:async';
 
 void main() {
   runApp(const MyApp());
@@ -9,117 +8,68 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ElevatedButton(
-        child: const Text('Show alert'),
-        onPressed: () {
-          showAboutDialog(context: context);
-        },
-      ),
+    return const MaterialApp(
+      title: 'Contoh Date Picker',
+      home: MyHomePage(title: 'Contoh Date Picker'),
     );
   }
 }
-
-showAlertDialog(BuildContext context) {
-  Widget okButton = TextButton(
-    child: const Text('OK'),
-    onPressed: () {
-      Navigator.pop(context);
-    },
-  );
-
-  // showDialog(
-  //   context: context,
-  //   builder: (BuildContext context) {
-  //     return alert;
-  //   }
-  // );
-
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('contoh textfield')),
-        body: const TextField(
-          obscureText: false,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Nama',
-          ),
-        ),
-      ),
-    );
-  }
-
-      // return const MaterialApp(
-    //   title: 'Flutter Demo',
-    //   theme: ThemeData(
-    //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    //     useMaterial3: true,
-    //   ),
-    //   home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    // );
-
-}
-
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  // Variable/State untuk mengambil tanggal
+  DateTime selectedDate = DateTime.now();
 
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
+  //  Initial SelectDate FLutter
+  Future<void> _selectDate(BuildContext context) async {
+    // Initial DateTime FIinal Picked
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(2015, 8),
+        lastDate: DateTime(2101));
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const MyTextWidget(),
-            const MyImageWidget(),
-
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Text("${selectedDate.toLocal()}".split(' ')[0]),
+            const SizedBox(
+              height: 20.0,
+            ),
+            ElevatedButton(
+              onPressed: () => {
+                _selectDate(context),
+                // ignore: avoid_print
+                print(selectedDate.day + selectedDate.month + selectedDate.year)
+              },
+              child: const Text('Pilih Tanggal'),
             ),
           ],
         ),
       ),
-
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 50.0,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), 
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
